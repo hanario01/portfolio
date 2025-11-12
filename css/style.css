@@ -1,0 +1,86 @@
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+/*------------------------------ 
+----------WORKS-section---------
+-------------------------------- */
+
+.works__contents {
+    display: flex;
+    gap: 20px;
+}
+
+.works_main__view {
+    width: 980px;
+    height: 580px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.work-01 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#main-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.mSCL__container {
+    width: 180px;
+    max-height: 580px;
+    overflow-y: auto;
+}
+
+.mSCL__container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnail {
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.thumbnail:hover {
+    border: 2px solid #ff4081;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.reveal-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: translate(-100%, 100%);
+    z-index: 2;
+    transition: transform 1.2s ease-out;
+}
+
+.reveal-image.revealed::before {
+    transform: translate(100%, -100%);
+}

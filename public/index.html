@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1 class="logo">Shoma Kai</h1>
+            <div class="nav">
+                <nav class="top__nav">
+                    <ul>
+                        <li>Works</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="first__view"></div>
+    </header>
+    <main>
+        <section id="works" class="section__container">
+            <div>
+                <h2>WORKS</h2>
+                <div class="works__tabs">
+                    <button class="tab-btn">Website</button>
+                    <button class="tab-btn">Banner</button>
+                </div>
+
+                <div class="works__contents">
+                    <!-- メイン表示 -->
+                    <div class="works_main__view">
+                        <figure class="work-01 reveal-image">
+                            <img id="main-image" src="../images/work-01.jpg" alt="案件画像">
+                            <figcaption id="main-description">
+                                <h3>案件1：教育アプリ</h3>
+                                <p>ユーザーが間違えた問題を復習できる機能を実装しました。</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- サムネイル一覧 -->
+                    <div class="mSCL__container">
+                        <ul>
+                            <li class="thumbnail" data-id="1">
+                                <img src="../images/work-01.jpg" alt="案件1">
+                            </li>
+                            <li class="thumbnail" data-id="2">
+                                <img src="../images/work-02.jpg" alt="案件2">
+                            </li>
+                            <li class="thumbnail" data-id="3">
+                                <img src="../images/work-03.jpg" alt="案件3">
+                            </li>
+                            <li class="thumbnail" data-id="4">
+                                <img src="../images/work-04.jpg" alt="案件4">
+                            </li>
+                            <li class="thumbnail" data-id="5">
+                                <img src="../images/work-05.jpg" alt="案件5">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section__container">
+
+        </section>
+        <section id="contact" class="section__container">
+
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
