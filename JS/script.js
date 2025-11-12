@@ -58,13 +58,28 @@ const projects = {
     `
     }
 };
-
 document.querySelectorAll('.thumbnail').forEach(item => {
     item.addEventListener('click', () => {
         const id = item.getAttribute('data-id');
         const project = projects[id];
 
-        document.getElementById('main-image').src = project.image;
-        document.getElementById('main-description').innerHTML = project.description;
+        const mainImage = document.getElementById('main-image');
+        const mainDescription = document.getElementById('main-description');
+        const figure = document.querySelector('.works_main__view .reveal-image');
+
+        // 覆いを戻す
+        figure.classList.remove('revealed');
+
+        // 画像と説明を更新
+        mainImage.src = project.image;
+        mainDescription.innerHTML = project.description;
+
+        // 強制リフローで状態をリセット
+        void figure.offsetWidth;
+
+        // アニメーション発火
+        figure.classList.add('revealed');
     });
 });
+
+
