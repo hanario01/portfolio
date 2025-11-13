@@ -7,20 +7,27 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sawarabi+Mincho&family=Zen+Old+Mincho&display=swap"
+        rel="stylesheet">
 
 
 </head>
 
 <body>
-    <header>
+    <header style="background-color: #2D4B50; color: #fff;">
         <div class="header">
-            <h1 class="logo">Shoma Kai</h1>
+            <h1 class="logo">SHOMA KAI</h1>
             <div class="nav">
-                <nav class="top__nav">
-                    <ul>
-                        <li>Works</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                <nav class="">
+                    <ul class="top__nav">
+                        <li>WORKS</li>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
                     </ul>
                 </nav>
             </div>
@@ -28,9 +35,9 @@
         <div class="first__view"></div>
     </header>
     <main>
-        <section id="works" class="section__container">
-            <div>
-                <h2>WORKS</h2>
+        <section id="works" class="sections " data-bg="#1b1b1b">
+            <div class=" section__container">
+                <h2 class="section__title white-shadow">WORKS</h2>
                 <div class="works__tabs">
                     <button class="tab-btn">Website</button>
                     <button class="tab-btn">Banner</button>
@@ -40,10 +47,12 @@
                     <!-- メイン表示 -->
                     <div class="works_main__view">
                         <figure class="work-01 reveal-image">
-                            <img id="main-image" src="../images/work-01.jpg" alt="案件画像">
+                            <a href="#works">
+                                <img id="main-image" class="main-image" src="../images/work-01.jpg" alt="案件画像">
+                            </a>
                             <figcaption id="main-description">
-                                <h3>案件1：教育アプリ</h3>
-                                <p>ユーザーが間違えた問題を復習できる機能を実装しました。</p>
+                                <h3 class="main-description-title">案件1：教育アプリ</h3>
+                                <p>ユーザーが間違えた問題を復習できる機能を実装しました</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -51,7 +60,7 @@
                     <!-- サムネイル一覧 -->
                     <div class="mSCL__container">
                         <ul>
-                            <li class="thumbnail" data-id="1">
+                            <li class="thumbnail click-animesion" data-id="1">
                                 <img src="../images/work-01.jpg" alt="案件1">
                             </li>
                             <li class="thumbnail" data-id="2">
@@ -72,11 +81,39 @@
             </div>
         </section>
 
-        <section id="about" class="section__container">
+        <section id="about" class="sections" data-bg="#2D4B50">
+            <div class="section__container">
+                <span></span> <!-- 縦線用 -->
+                <h2 class="section__title">
+                    ABOUT
+                    <svg class="title-border" width="160" height="50" viewBox="0 0 160 50">
+                        <rect x="0" y="0" width="160" height="50" fill="none" stroke="#fff" stroke-width="2"
+                            stroke-dasharray="420" stroke-dashoffset="420" />
+                    </svg>
+                </h2>
+                <div class="about__items">
+                    <div class="about__items__disc">
+                        <span class="name__disc">Kai Shoma</span>
+                        <div class="name__title">甲斐　省真</div>
+                        <div class="about__text">
+                            <p>テキストテキストテキスト…</p>
+                        </div>
+                    </div>
+                    <div class="about__image">
+                        <img src="../images/work-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="btn text-center"><a href="#about">ViewMore</a></div>
+            </div>
 
         </section>
-        <section id="contact" class="section__container">
 
+        <section id="contact" class="sections" data-bg="#C8B496">
+            <div class="section__container">
+                <div class="contact__btn text-center">
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>

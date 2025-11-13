@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".sections");
+
+    const options = {
+        threshold: 0.3, // セクションの30％が見えた時点で発火
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const bgColor = entry.target.getAttribute("data-bg");
+                document.body.style.backgroundColor = bgColor;
+            }
+        });
+    }, options);
+
+    sections.forEach((section) => observer.observe(section));
+});
+
+
 //works script----------------
 //----------------------------
 
@@ -9,15 +29,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // 初回スクロール時に revealed を付ける
                 entry.target.classList.add('revealed');
-                observer.unobserve(entry.target); // 一度だけ発火
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.5 // 50%表示されたら発火
+        threshold: 0.5
     });
 
     targets.forEach(target => observer.observe(target));
+
+    // サムネイルクリック処理
+    document.querySelectorAll('.thumbnail').forEach(item => {
+        item.addEventListener('click', () => {
+            const id = item.getAttribute('data-id');
+            const project = projects[id];
+
+            const mainImage = document.getElementById('main-image');
+            const mainDescription = document.getElementById('main-description');
+            const figure = document.querySelector('.works_main__view .reveal-image');
+
+            // サムネイルにクリックアニメーション
+            item.classList.add('clicked');
+            setTimeout(() => {
+                item.classList.remove('clicked');
+            }, 400);
+
+            // メイン表示を更新
+            figure.classList.add('revealed');
+            mainImage.src = project.image;
+            mainDescription.innerHTML = project.description;
+
+        });
+    });
 });
 
 
@@ -58,28 +103,8 @@ const projects = {
     `
     }
 };
-document.querySelectorAll('.thumbnail').forEach(item => {
-    item.addEventListener('click', () => {
-        const id = item.getAttribute('data-id');
-        const project = projects[id];
 
-        const mainImage = document.getElementById('main-image');
-        const mainDescription = document.getElementById('main-description');
-        const figure = document.querySelector('.works_main__view .reveal-image');
 
-        // 覆いを戻す
-        figure.classList.remove('revealed');
 
-        // 画像と説明を更新
-        mainImage.src = project.image;
-        mainDescription.innerHTML = project.description;
-
-        // 強制リフローで状態をリセット
-        void figure.offsetWidth;
-
-        // アニメーション発火
-        figure.classList.add('revealed');
-    });
-});
 
 
