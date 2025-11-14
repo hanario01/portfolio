@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,8 +10,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sawarabi+Mincho&family=Zen+Old+Mincho&display=swap"
         rel="stylesheet">
@@ -19,22 +18,10 @@
 </head>
 
 <body>
-    <header style="background-color: #2D4B50; color: #fff;">
-        <div class="header">
-            <h1 class="logo">SHOMA KAI</h1>
-            <div class="nav">
-                <nav class="">
-                    <ul class="top__nav">
-                        <li>WORKS</li>
-                        <li>ABOUT</li>
-                        <li>CONTACT</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="first__view"></div>
-    </header>
+    <?php include('header.php'); ?>
+
     <main>
+        <div class="first__view"></div>
         <section id="works" class="sections " data-bg="#1b1b1b">
             <div class=" section__container">
                 <h2 class="section__title white-shadow">WORKS</h2>
@@ -85,7 +72,7 @@
             <div class="section__container">
                 <span></span> <!-- 縦線用 -->
                 <h2 class="section__title">
-                    ABOUT
+                    ABOUT ME
                     <svg class="title-border" width="160" height="50" viewBox="0 0 160 50">
                         <rect x="0" y="0" width="160" height="50" fill="none" stroke="#fff" stroke-width="2"
                             stroke-dasharray="420" stroke-dashoffset="420" />
@@ -96,14 +83,23 @@
                         <span class="name__disc">Kai Shoma</span>
                         <div class="name__title">甲斐　省真</div>
                         <div class="about__text">
-                            <p>テキストテキストテキスト…</p>
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="about__image">
                         <img src="../images/work-01.jpg" alt="">
                     </div>
                 </div>
-                <div class="btn text-center"><a href="#about">ViewMore</a></div>
+                <div class="btn text-center">
+                    <a href="#about" class="learn-more">
+                        <span class="circle">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Read More</span>
+                    </a>
+                </div>
+
             </div>
 
         </section>

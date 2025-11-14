@@ -45,7 +45,7 @@ canvas {
 }
 
 .sections {
-    margin-bottom: 100px;
+    padding: 100px 0;
 }
 
 
@@ -70,6 +70,90 @@ canvas {
 .sp-only {
     display: none;
 }
+
+
+/* ---------------------
+   Read More Button
+----------------------*/
+
+.btn {
+    margin-top: 2rem;
+}
+
+.learn-more {
+    position: relative;
+    display: inline-block;
+    width: 12rem;
+    height: 3rem;
+    text-decoration: none;
+    font-family: inherit;
+    vertical-align: middle;
+}
+
+.learn-more .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #131212;
+    border-radius: 1.625rem;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more .circle .arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more .circle .arrow::before {
+    content: "";
+    position: absolute;
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    padding-left: 1.75rem;
+    line-height: 3rem;
+    text-align: center;
+    font-weight: 700;
+    color: #1b1b1b;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    text-transform: uppercase;
+}
+
+/* hover animation */
+.learn-more:hover .circle {
+    width: 100%;
+}
+
+.learn-more:hover .circle .arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+.learn-more:hover .button-text {
+    color: #fff;
+}
+
 
 @media (max-width: 768px) {
     .sp-only {
@@ -100,6 +184,129 @@ nav {
     gap: 1.5rem;
 }
 
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    /* 透明に */
+    color: #fff;
+    transition: 0.4s;
+}
+
+.site-header.header--small {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 10px 0;
+}
+
+/* ---------------------------
+   Header base
+--------------------------- */
+.site-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* PCナビ */
+.top__nav {
+    display: flex;
+    gap: 40px;
+}
+
+.top__nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ハンバーガー */
+.hamburger {
+    display: none;
+    /* PCでは非表示 */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* ---------------------------
+   スクロールでハンバーガーに切り替え
+--------------------------- */
+.site-header.scrolled .top__nav {
+    display: none;
+    /* PCナビを隠す */
+}
+
+.site-header.scrolled .hamburger {
+    display: flex;
+    /* ハンバーガーを表示 */
+}
+
+/* ---------------------------
+   SP対応
+--------------------------- */
+@media (max-width: 768px) {
+    .top__nav {
+        display: none;
+        /* デフォルト非表示 */
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .top__nav.open {
+        display: flex;
+        /* ハンバーガークリックで表示 */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ハンバーガーアニメーション（×に変形） */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+
 
 .first__view {
     width: 100%;
@@ -108,7 +315,10 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #2D4B50;
 }
+
+
 
 
 /* ----------------
@@ -312,7 +522,7 @@ About-------------
 }
 
 .btn {
-    margin-top: 4rem;
+    padding: 5rem;
 }
 
 

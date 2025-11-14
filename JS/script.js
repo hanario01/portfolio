@@ -1,8 +1,31 @@
+
+const header = document.querySelector('.site-header');
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.top__nav');
+
+// スクロールでハンバーガー切り替え
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// ハンバーガー開閉
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');        // ナビ表示切替
+    hamburger.classList.toggle('active'); // ハンバーガーアニメーション
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".sections");
 
     const options = {
-        threshold: 0.3, // セクションの30％が見えた時点で発火
+        threshold: 0.2, // セクションの30％が見えた時点で発火
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -35,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.5
+        threshold: 0.3
     });
 
     targets.forEach(target => observer.observe(target));
