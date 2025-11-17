@@ -23,22 +23,44 @@ hamburger.addEventListener('click', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".sections");
+    const body = document.body;
 
-    const options = {
-        threshold: 0.2, // セクションの30％が見えた時点で発火
-    };
+    // body背景色のスムーズ切替
+    body.style.transition = "background-color 0.5s ease";
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const bgColor = entry.target.getAttribute("data-bg");
-                document.body.style.backgroundColor = bgColor;
+    const updateBg = () => {
+        const middle = window.innerHeight / 2;
+
+        let closestSection = null;
+        let closestDistance = Infinity;
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionMiddle = rect.top + rect.height / 2;
+            const distance = Math.abs(sectionMiddle - middle);
+
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestSection = section;
             }
         });
-    }, options);
 
-    sections.forEach((section) => observer.observe(section));
+        if (closestSection) {
+            const bgColor = closestSection.getAttribute("data-bg");
+            if (body.style.backgroundColor !== bgColor) {
+                body.style.backgroundColor = bgColor;
+            }
+        }
+    };
+
+    // 初期表示
+    updateBg();
+
+    // スクロール・リサイズで常に更新
+    window.addEventListener("scroll", updateBg);
+    window.addEventListener("resize", updateBg);
 });
+
 
 
 //works script----------------
@@ -126,6 +148,38 @@ const projects = {
     `
     }
 };
+
+
+// ReadMore ボタン処理
+document.querySelectorAll('.readmore-box').forEach(box => {
+    const button = box.querySelector('button');
+    const content = box.querySelector('.readmore-content');
+
+    button.addEventListener('click', () => {
+        box.classList.toggle('open');
+    });
+});
+
+//コンタクトの線のアニメーション位置を取得して配置
+document.addEventListener("DOMContentLoaded", () => {
+    const skills = document.querySelector("#line-to-contact");
+    const line = document.querySelector(".falling-line");
+
+    const adjustLineStart = () => {
+        const rect = skills.getBoundingClientRect();
+        const skillsBottom = rect.bottom + window.scrollY;
+
+        line.style.top = skillsBottom + "px";
+    };
+
+    adjustLineStart();
+    window.addEventListener("resize", adjustLineStart);
+    window.addEventListener("scroll", adjustLineStart);
+});
+
+
+
+
 
 
 

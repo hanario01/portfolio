@@ -5,6 +5,7 @@
 :root {
     --base-color: #1b1b1b;
     --text-color: #fcf0f0;
+    --text-color-sub: #37383C;
     --accent-color: #0078ff;
     --sub-color: #f5f5f5;
     --font-family: "sawarabi mincho", sans-serif;
@@ -177,6 +178,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .top__nav {
@@ -190,8 +192,8 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent;
-    /* 透明に */
+    background: rgba(255, 255, 255, 0);
+    /* 完全透明 */
     color: #fff;
     transition: 0.4s;
 }
@@ -270,7 +272,7 @@ nav {
 }
 
 /* ---------------------------
-   SP対応
+   SP
 --------------------------- */
 @media (max-width: 768px) {
     .top__nav {
@@ -485,16 +487,25 @@ About-------------
 }
 
 
+.section-title__margin-bottom {
+    padding: 4rem;
+
+}
 
 .name__title {
     font-size: 2rem;
+}
+
+.about__page {
+    margin-top: 3rem;
+    /* height: 100vw; */
 }
 
 .about__items {
     display: flex;
     flex-direction: row;
     width: min(90%, 960px);
-    margin: 0 auto;
+    justify-content: space-between;
 }
 
 .about__items__disc {
@@ -502,7 +513,7 @@ About-------------
     margin: 0 auto;
 }
 
-.about__text {
+.text__box {
     font-size: 12px;
     margin-top: 2rem;
 }
@@ -512,14 +523,15 @@ About-------------
 }
 
 .about__image {
-    width: 50%;
-    margin: 0 auto;
+    width: 35%;
+    height: auto;
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.6),
         /* 下に深い影 */
         0 0 20px rgba(255, 255, 255, 0.1);
     /* 周囲に柔らかい光 */
 }
+
 
 .btn {
     padding: 5rem;
@@ -534,4 +546,201 @@ CONTACT-------------------------
     font-size: 100px;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     /* 柔らかい影 */
+}
+
+/* Skillの下から線を落とすための枠 */
+.fall-line-wrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    /* 線の落下距離。調整してOK */
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* 落下する線本体 */
+.falling-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 120px;
+    /* 線の長さ */
+    background: rgba(255, 255, 255, 0.85);
+    animation: fallLine 1.8s linear infinite;
+}
+
+/* 落下アニメーション */
+@keyframes fallLine {
+    0% {
+        top: -150px;
+        /* スタート位置 */
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 350px;
+        /* wrapper の高さと合わせる */
+        opacity: 0;
+    }
+}
+
+
+
+
+/*------------------------------ 
+Aboutpage-----------------------
+------------------------------- */
+
+
+.skill__items {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* .skill__items p {
+    color: #1b1b1b;
+} */
+
+.skill__item {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.skill__image {
+    width: 45%;
+}
+
+.skill__text {
+    width: 50%;
+}
+
+.skill__text p {
+    margin-top: 5rem;
+}
+
+.skill__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.6),
+        /* 下に深い影 */
+        0 0 20px rgba(255, 255, 255, 0.1);
+    /* 周囲に柔らかい光 */
+}
+
+.skills-btn {
+    text-align: center;
+    padding: 3rem;
+}
+
+/* readmoreボタン機能-----------
+------------------------------- */
+
+/* ReadMore ボックス全体 */
+.readmore-box {
+    margin: 20px 0 40px;
+}
+
+/* ボタンデザイン */
+.readmore-box button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0;
+}
+
+/* アイコンの丸部分 */
+.readmore-box .icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* ＋マーク */
+.readmore-box .icon::before,
+.readmore-box .icon::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transition: 0.3s;
+}
+
+/* 縦棒 */
+.readmore-box .icon::before {
+    width: 2px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+}
+
+/* 横棒 */
+.readmore-box .icon::after {
+    width: 14px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+/* 開いたとき → ＋ が × に変形 */
+.readmore-box.open .icon::before {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.readmore-box.open .icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* 開閉コンテンツ（初期は隠す） */
+.readmore-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+
+}
+
+.readmore-content ul li {
+    margin-bottom: 1.5rem;
+}
+
+.readmore-content ul li h3 {
+    /* color: #f8f8f8; */
+}
+
+/* 表示時 */
+.readmore-box.open .readmore-content {
+    max-height: 1000px;
+    /* 十分に大きくしておけばOK */
+    opacity: 1;
+}
+
+.readmore__btn {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.readmore-btn-wrap {
+    display: flex;
+    justify-content: center;
 }

@@ -1,4 +1,4 @@
-<header class="site-header" style="background-color: #2D4B50; color: #fff;">
+<header class="site-header" style="color: #fff;">
     <div class="header">
         <h1 class="logo">SHOMA KAI</h1>
 

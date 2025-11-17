@@ -68,10 +68,10 @@
             </div>
         </section>
 
-        <section id="about" class="sections" data-bg="#2D4B50">
+        <section id="about line-to-contact" class="sections" data-bg="#2D4B50">
             <div class="section__container">
                 <span></span> <!-- 縦線用 -->
-                <h2 class="section__title">
+                <h2 class="section__title section-title__margin-bottom">
                     ABOUT ME
                     <svg class="title-border" width="160" height="50" viewBox="0 0 160 50">
                         <rect x="0" y="0" width="160" height="50" fill="none" stroke="#fff" stroke-width="2"
@@ -82,7 +82,7 @@
                     <div class="about__items__disc">
                         <span class="name__disc">Kai Shoma</span>
                         <div class="name__title">甲斐　省真</div>
-                        <div class="about__text">
+                        <div class="text__box">
                             <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
@@ -103,14 +103,21 @@
             </div>
 
         </section>
+        
+        <div class="fall-line-wrapper">
+            <div class="falling-line"></div>
+        </div>
 
+        
         <section id="contact" class="sections" data-bg="#C8B496">
             <div class="section__container">
                 <div class="contact__btn text-center">
                     <a href="#contact">CONTACT</a>
                 </div>
+                
             </div>
         </section>
+
     </main>
     <footer></footer>
     <script src="../JS/script.js"></script>
