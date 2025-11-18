@@ -178,7 +178,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .top__nav {
@@ -349,6 +348,7 @@ works-------------
         /* 下に深い影 */
         0 0 20px rgba(255, 255, 255, 0.1);
     /* 周囲に柔らかい光 */
+
 }
 
 .tab-btn {
@@ -553,7 +553,7 @@ CONTACT-------------------------
     position: absolute;
     left: 0;
     width: 100%;
-    height: 350px;
+    height: 200px;
     /* 線の落下距離。調整してOK */
     overflow: hidden;
     pointer-events: none;
@@ -569,13 +569,13 @@ CONTACT-------------------------
     height: 120px;
     /* 線の長さ */
     background: rgba(255, 255, 255, 0.85);
-    animation: fallLine 1.8s linear infinite;
+    animation: fallLine 2s linear infinite;
 }
 
 /* 落下アニメーション */
 @keyframes fallLine {
     0% {
-        top: -150px;
+        top: -200px;
         /* スタート位置 */
         opacity: 0;
     }
@@ -743,4 +743,190 @@ Aboutpage-----------------------
 .readmore-btn-wrap {
     display: flex;
     justify-content: center;
+}
+
+
+/*--------------------------- 
+Works page----------------
+--------------------------- */
+
+.work-main {
+    margin-top: 70px;
+}
+
+.hero__image {
+    width: 100%;
+    height: 90vh;
+    background-color: #2D4B50;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.hero__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    color: #f5f5f5;
+}
+
+.hero__image {
+    width: 65%;
+}
+
+.hero__image img {
+    width: 100%;
+}
+
+.hero__dis {
+    width: 55%;
+    margin: 0 auto;
+
+}
+
+.site-link-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.work__info {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.work__info p {
+    font-size: 14px;
+}
+
+.work__info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.work__info ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.work__info ul li h3 {
+    width: 20%;
+}
+
+.work__info ul li p {
+    width: 70%;
+}
+
+.work__title {
+    font-size: 16px;
+    color: #7AA9B5;
+    /* 画像で使われてる淡いブルー系ならこの色が合う */
+    white-space: nowrap;
+    padding-top: 4px;
+    width: 20%;
+}
+
+
+.list-time__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-time__item {
+    display: flex;
+    flex-direction: row;
+    width: 960px;
+    /* 左：見出し / 右：リスト */
+    align-items: start;
+    justify-content: center;
+}
+
+.list-time__item h3 {
+    font-size: 16px;
+    color: #7AA9B5;
+    /* 画像で使われてる淡いブルー系ならこの色が合う */
+    white-space: nowrap;
+    padding-top: 4px;
+    width: 20%;
+}
+
+.work-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 70%;
+}
+
+.work-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.work-row span {
+    font-size: 14px;
+}
+
+.work-item {
+    margin-right: 1rem;
+}
+
+.work-duration {
+    white-space: nowrap;
+}
+
+/* レスポンシブセクション */
+
+.mockup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px 0;
+
+    /* 背景色 */
+}
+
+.mockup-phone {
+    display: flex;
+    width: 22%;
+    /* モックの横幅 */
+    height: 430px;
+    /* モックの高さ */
+    border: 10px solid #ccc;
+    /* スマホのフレーム */
+    border-radius: 36px;
+    /* 角丸でスマホ感 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.mockup-phone::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: #aaa;
+    border-radius: 3px;
+    /* スマホ上部スピーカー */
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
