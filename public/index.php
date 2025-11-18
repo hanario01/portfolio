@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="about__image">
-                        <img src="../images/work-01.jpg" alt="">
+                        <img src="../images/about.jpg" alt="">
                     </div>
                 </div>
                 <div class="btn text-center">
