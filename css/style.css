@@ -795,94 +795,87 @@ Works page----------------
     margin-top: 2rem;
 }
 
+
+/*----------------------------
+ Workinfo------------------
+---------------------------- */
 .work__info {
-    max-width: 960px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
 }
 
-.work__info p {
-    font-size: 14px;
-}
-
-.work__info ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.work__info ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.work__info ul li h3 {
-    width: 20%;
-}
-
-.work__info ul li p {
-    width: 70%;
-}
-
-.work__title {
-    font-size: 16px;
-    color: #7AA9B5;
+.project__overview_dis {
+    font-size: 1.5rem;
     /* 画像で使われてる淡いブルー系ならこの色が合う */
     white-space: nowrap;
-    padding-top: 4px;
+    padding: 4px 0;
     width: 20%;
+    margin-bottom: 1rem;
 }
 
-
-.list-time__item {
-    display: flex;
-    flex-direction: row;
+.h2-color {
+    color: #C8B496;
 }
 
-.list-time__item {
-    display: flex;
-    flex-direction: row;
-    width: 960px;
-    /* 左：見出し / 右：リスト */
-    align-items: start;
-    justify-content: center;
-}
-
-.list-time__item h3 {
-    font-size: 16px;
-    color: #7AA9B5;
-    /* 画像で使われてる淡いブルー系ならこの色が合う */
-    white-space: nowrap;
-    padding-top: 4px;
-    width: 20%;
-}
-
-.work-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 70%;
-}
-
-.work-row {
+.work__info__items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.work-row span {
+.works-name a {
     font-size: 14px;
 }
 
-.work-item {
-    margin-right: 1rem;
+.siteview-btn {
+    padding: 10px;
+    border: 2px solid #C8B496;
+    border-radius: 1px;
 }
 
-.work-duration {
-    white-space: nowrap;
+.project__container {
+    margin-top: 2rem;
 }
+
+.project__overview {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project__overview_item {
+    width: 50%;
+}
+
+.project__tools {
+    width: 40%;
+}
+
+.tool_items {
+    margin-top: 1rem;
+}
+
+.tool_items span {
+    padding: 10px;
+    border: 1px solid #ccbeaa;
+    border-radius: 3px;
+}
+
+.project__meta {
+    margin-top: 2rem;
+}
+
+.project__meta ul span {
+    color: #C8B496;
+}
+
+.project__meta ul li {
+    margin-bottom: 1rem;
+}
+
+
+
+
 
 /* レスポンシブセクション */
 

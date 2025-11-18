@@ -22,101 +22,86 @@
         <div class="hero">
             <div class="hero__container">
                 <div class="hero__title">
-                    <span>#website</span>
-                    <h1>EspressoLane</h1>
+                    <span class="site-tag"><a href="">#website</a></span>
+                    <h1>.Anew(架空)</h1>
                 </div>
                 <div class="hero__image">
                     <img src="" alt="">
                 </div>
             </div>
-            <p class="hero__dis">案件説明が入ります案件説明が入ります案件説明が入ります案件説明が入ります案件説明が入ります案件説明が入ります案件説明が入ります案件説明が入ります案件説明が入ります</p>
-            <div class="site-link-btn">
-                <a href="#site">サイトを見る</a>
-            </div>
         </div>
         <section class="sections">
-            <div class="work__info">
-                <ul>
-                    <li>
-                        <h3 class="work__title">ターゲット</h3>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li>
-                        <h3 class="work__title">コンセプト</h3>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li>
-                        <h3 class="work__title">情報設計</h3>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li>
-                        <h3 class="work__title">デザインプロセス</h3>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li>
-                        <h3 class="work__title">課題</h3>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </li>
-                    <li class="list-time">
-                        <div class="list-time__item">
-                            <h3 class="work__title">製作期間</h3>
-                            <ul class="work-list">
-                                <li class="work-row">
-                                    <span class="work-item">企画 / 情報設計 / WF</span>
-                                    <span class="work-duration">2週間</span>
+            <div class="section__container">
+                <div class="work__info">
+                    <div class="work__info__items">
+                        <div class="works-name">
+                            <span class="tag h2-color"><a href="">#website</a></span>
+                            <h1 class="works__title">.Anew (架空サイト)</h1>
+                        </div>
+                        <div class="siteview-btn">
+                            <a href="">Live Site</a>
+                        </div>
+                    </div>
+                    <div class="project__container">
+                        <div class="project__overview">
+                            <div class="project__overview_item ">
+                                <h2 class="project__overview_dis h2-color">Project Overview</h2>
+                                <p>大手企業のコーポレートサイトをリニューアル。ブランドイメージを保ちながら、モダンで使いやすいUIを実現しました。レスポンシブデザインを採用し、あらゆるデバイスで最適な表示を提供します。アクセシビリティにも配慮し、WCAG 2.1 AA基準を満たしています。</p>
+                            </div>
+                        
+                            <div class="project__tools">
+                                <h2 class="project__overview_dis h2-color">Tools</h2>
+                                <div class="tool_items">
+                                    <span>Figma</span>
+                                    <span>Photoshop</span>
+                                    <span>VsCode</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__meta">
+                            <ul>
+                                <li>
+                                    <span>Client</span>
+                                    <p>架空クライアント</p>
                                 </li>
-                                <li class="work-row">
-                                    <span class="work-item">デザイン</span>
-                                    <span class="work-duration">2週間</span>
+                                <li>
+                                    <span>Year</span>
+                                    <p>2025/11/5</p>
                                 </li>
-                                <li class="work-row">
-                                    <span class="work-item">コーディング</span>
-                                    <span class="work-duration">4週間</span>
+                                <li>
+                                    <span>Duration</span>
+                                    <p>2週間</p>
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li>
-                        <h3 class="work__title">使用ツール</h3>
-                        <p>Figma / Photoshop / VScode</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div class="section__container">
-                <div class="mockup-wrapper">
-                    <ul class="mockup-container">
-                        <li class="mockup-phone">
-                            <div class="screen">
-                                <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
-                            </div>
-                        </li>
-                        <li class="mockup-phone">
-                            <div class="screen">
-                                <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
-                            </div>
-                        </li>
-                        <li class="mockup-phone">
-                            <div class="screen">
-                                <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
-                            </div>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section>
+                <div class="section__container">
+                    <div class="mockup-wrapper">
+                        <ul class="mockup-container">
+                            <li class="mockup-phone">
+                                <div class="screen">
+                                    <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
+                                </div>
+                            </li>
+                            <li class="mockup-phone">
+                                <div class="screen">
+                                    <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
+                                </div>
+                            </li>
+                            <li class="mockup-phone">
+                                <div class="screen">
+                                    <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
 
     </main>
     <footer></footer>
