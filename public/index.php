@@ -83,8 +83,11 @@
                         <span class="name__disc">Kai Shoma</span>
                         <div class="name__title">甲斐　省真</div>
                         <div class="text__box">
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p>前職では1年間システムエンジニアとして開発案件に携わり、
+その経験を活かしてWebデザインの道へ進むことを決意しました。
+シンプルで洗練されたデザインを大切にし、
+ユーザーに寄り添った心地よい体験を提供できるクリエイターを目指しています。</p>
+                            
                         </div>
                     </div>
                     <div class="about__image">
@@ -92,7 +95,7 @@
                     </div>
                 </div>
                 <div class="btn text-center">
-                    <a href="#about" class="learn-more">
+                    <a href="../views/about.php" class="learn-more">
                         <span class="circle">
                             <span class="icon arrow"></span>
                         </span>
@@ -119,7 +122,7 @@
         </section>
 
     </main>
-    <footer></footer>
+     
     <script src="../JS/script.js"></script>
 </body>
 

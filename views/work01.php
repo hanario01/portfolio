@@ -131,7 +131,7 @@
         </div>
 
     </main>
-    <footer></footer>
+     <?php include('../views/footer.php'); ?>
     <script src="../JS/script.js"></script>
 </body>
 

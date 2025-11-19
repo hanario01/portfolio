@@ -25,8 +25,9 @@
                         <span class="name__disc">Kai Shoma</span>
                         <div class="name__title">甲斐　省真</div>
                         <div class="text__box">
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p>前職では1年間システムエンジニアとして開発案件に携わり、その経験を活かしてWebデザインの道へ進むことを決意しました。</p>
+                            <p>シンプルで洗練されたデザインを大切にし、ユーザーに寄り添った心地よい体験を提供できるクリエイターを目指しています。</p>
+                             
                         </div>
                     </div>
                     <div class="about__image">
@@ -45,14 +46,16 @@
                         </div>
                         <div class="skill__text">
                             <h2 class="skill__title">Web Design</h2>
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p>FigmaやPhotoshopを使ったWebデザイン制作ができます。
+                                ワイヤーフレーム作成、レイアウト設計、UIデザインまで一貫して対応可能です。
+                                見やすさ・使いやすさを意識した、整理されたデザインを心がけています。</p>
                         </div>
                     </div>
                     <div class="readmore-box">
                         <div class="readmore-btn-wrap">
                             <button>
                                 <span class="icon"></span>
-                                <span class="label">Read More</span>
+                                <a href=""><span class="label">Read More</span></a>
                             </button>
                         </div>
                         <div class="readmore-content">
@@ -72,7 +75,9 @@
                     <div class="skill__item">
                         <div class="skill__text">
                             <h2 class="skill__title">Web Development</h2>
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p>HTML/CSS・JavaScriptを使ったフロントエンド実装ができます。
+レスポンシブ対応やアニメーションなど、デザインを忠実に再現するコーディングが可能です。
+PHPを用いた簡単なフォーム処理や動的ページの制作にも対応できます。</p>
                         </div>
                         <div class="skill__image">
                             <img src="../images/webdeveloper.jpeg" alt="">
@@ -117,7 +122,6 @@
             </div>
         </section>
     </main>
-    <footer></footer>
     <script src="../JS/script.js"></script>
 </body>
 </html>

@@ -37,6 +37,10 @@ canvas {
     max-width: 100%;
 }
 
+h2 {
+    color: #C8B496;
+}
+
 .white-shadow {
     text-shadow:
         0 2px 4px rgba(255, 255, 255, 0.1),
@@ -162,27 +166,34 @@ canvas {
     }
 }
 
-/* ----------------
-header-------------
-------------------- */
+
+/* ---------------------------
+   Header base
+--------------------------- */
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: var(--section-title), sans-serif;
+    font-weight: 500;
 }
 
 nav {
     font-family: var(--section-title), sans-serif;
 }
 
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .top__nav {
     display: flex;
     gap: 1.5rem;
+
 }
 
 .site-header {
@@ -201,37 +212,6 @@ nav {
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
     padding: 10px 0;
-}
-
-/* ---------------------------
-   Header base
---------------------------- */
-.site-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    transition: 0.3s ease;
-}
-
-.header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-/* PCナビ */
-.top__nav {
-    display: flex;
-    gap: 40px;
 }
 
 .top__nav li a {
@@ -260,15 +240,45 @@ nav {
 /* ---------------------------
    スクロールでハンバーガーに切り替え
 --------------------------- */
+.site-header.scrolled .logo {
+    display: none;
+}
+
 .site-header.scrolled .top__nav {
     display: none;
-    /* PCナビを隠す */
 }
+
 
 .site-header.scrolled .hamburger {
     display: flex;
     /* ハンバーガーを表示 */
 }
+
+/* デスクトップナビ（ハンバーガー用） */
+.desktop-nav {
+    position: fixed;
+    top: 60px;
+    /* ヘッダーの下から表示 */
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10% 5%;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+.desktop-nav.active {
+    display: flex;
+}
+
+.desktop-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
 
 /* ---------------------------
    SP
@@ -304,44 +314,11 @@ nav {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ---------------------------
-   デスクトップハンバーガー用モバイルナビ風
---------------------------- */
-/* 初期状態は非表示（右上から拡大で出る） */
-.desktop-nav {
-    position: absolute;
-    top: 60px;
-    /* ハンバーガー下あたり */
-    right: 20px;
-    background-color: #1b1b1b;
-    border-radius: 10px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    /* ここが重要 */
-    transform: scale(0);
-    transform-origin: top right;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-/* activeクラスで表示 */
-.desktop-nav.active {
-    transform: scale(1);
-}
-
-
-
-
-
-
 
 .first__view {
     width: 100%;
     height: 100vh;
-    background-image: url('../images/');
+    background-image: url('../');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -354,8 +331,6 @@ nav {
 /* ----------------
 works-------------
 ------------------- */
-
-
 
 .works__contents {
     display: flex;
@@ -375,7 +350,9 @@ works-------------
     height: auto;
     object-fit: contain;
     box-shadow:
-        0 0 15px rgba(255, 255, 255, 0.15);
+        0 8px 20px rgba(0, 0, 0, 0.6),
+        /* 下に深い影 */
+        0 0 20px rgba(255, 255, 255, 0.1);
     /* 周囲に柔らかい光 */
 
 }
@@ -462,6 +439,10 @@ works-------------
 /* ----------------
 About-------------
 ------------------- */
+
+#skills h3 {
+    color: #2D4B50;
+}
 
 /* ABOUTセクションのラッパーを相対配置 */
 .section__container {
@@ -681,6 +662,10 @@ Aboutpage-----------------------
     margin: 20px 0 40px;
 }
 
+.readmore-box h3 {
+    color: #37bdd4;
+}
+
 /* ボタンデザイン */
 .readmore-box button {
     display: flex;
@@ -783,28 +768,10 @@ Works page----------------
     margin-top: 70px;
 }
 
-.hero {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 2rem 4rem;
-}
-
-.back-to-works {
-    margin: 1rem 2rem;
-    color: #C8B496;
-}
-
 .hero__image {
     width: 100%;
     height: 90vh;
     background-color: #2D4B50;
-}
-
-.hero__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .hero__container {
@@ -812,7 +779,6 @@ Works page----------------
     flex-direction: row;
     justify-content: center;
     margin-bottom: 50px;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
 }
 
 .hero__title {
@@ -854,6 +820,7 @@ Works page----------------
 
 .project__overview_dis {
     font-size: 1.5rem;
+    /* 画像で使われてる淡いブルー系ならこの色が合う */
     white-space: nowrap;
     padding: 4px 0;
     width: 20%;
@@ -876,32 +843,10 @@ Works page----------------
 }
 
 .siteview-btn {
-    text-align: center;
-}
-
-
-.siteview-btn a {
-    border-radius: 1px;
+    padding: 10px;
     border: 2px solid #C8B496;
-    display: inline-block;
-    padding: 14px 25px;
-    transition: 0.3s;
-    margin-top: 1.5rem;
-
+    border-radius: 1px;
 }
-
-.siteview-btn a svg {
-    margin-left: 6px;
-    vertical-align: middle;
-}
-
-
-.siteview-btn a:hover {
-    background-color: #C8B496;
-    color: #1b1b1b;
-    transform: 0.3s;
-}
-
 
 .project__container {
     margin-top: 2rem;
@@ -925,21 +870,10 @@ Works page----------------
 }
 
 .tool_items span {
-    padding: 5px 10px;
+    padding: 10px;
     border: 1px solid #ccbeaa;
-    border-radius: 1px;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
+    border-radius: 3px;
 }
-
-/* ホバー時 */
-.tool_items span:hover {
-    border-color: #C8B496;
-    color: #C8B496;
-}
-
 
 .project__meta {
     margin-top: 2rem;
@@ -959,69 +893,90 @@ Works page----------------
 
 /* レスポンシブセクション */
 
-.mockup-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
 .mockup-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* ← 3列 */
-    gap: 2rem;
-    /* モック間のスペース */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 1200px;
-    /* 最大幅で中央寄せ */
-}
-
-.mockup-phone {
-    position: relative;
-    aspect-ratio: 9 / 16;
-    /* スマホっぽい比率 */
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
-    margin: 0 auto;
-    width: 100%;
+    gap: 2rem;
+    padding: 40px 0;
+
+    /* 背景色 */
 }
 
-.mockup-phone .screen img {
+.mockup-phone {
+    display: flex;
+    width: 22%;
+    /* モックの横幅 */
+    height: 430px;
+    /* モックの高さ */
+    border: 10px solid #ccc;
+    /* スマホのフレーム */
+    border-radius: 36px;
+    /* 角丸でスマホ感 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.mockup-phone::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: #aaa;
+    border-radius: 3px;
+    /* スマホ上部スピーカー */
+}
+
+.screen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
-.screen img {}
 
-/* -------------------------
-   Responsive（スマホ対応）
--------------------------- */
+/* --------------------
+footer-----------------
+---------------------- */
 
-/* 中サイズ：2列 */
-@media (max-width: 900px) {
-    .mockup-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.footer {
+    background-color: #2D4B50;
+    /* 好きな色に変更可 */
+    padding: 30px 0;
+    color: #fff;
 }
 
-/* 小サイズ：1列 */
-@media (max-width: 600px) {
-    .mockup-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-.desktop-page {
+.footer__container {
+    max-width: 1100px;
     margin: 0 auto;
-    margin-top: 100px;
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.20);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+
+.footer__nav a:hover {
+    opacity: 0.7;
+}
+
+.footer__copy {
+    font-size: 12px;
+    opacity: 0.8;
 }

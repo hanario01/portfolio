@@ -1,4 +1,6 @@
 
+// ヘッダーーーーーーーーーーーーーーーーーーーーーーー
+
 const hamburger = document.querySelector('.hamburger');
 const desktopNav = document.querySelector('.desktop-nav');
 const header = document.querySelector('.site-header');
@@ -10,21 +12,16 @@ hamburger.addEventListener('click', () => {
 });
 
 // スクロールでヘッダー切り替え
-let lastScroll = 0;
-
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
 
-    if (currentScroll > lastScroll && currentScroll > 80) {
-        // 下スクロール → ヘッダー非表示
-        header.style.top = '-100px';
+    if (currentScroll > 50) {
+        header.classList.add('scrolled');
     } else {
-        // 上スクロール → ヘッダー表示
-        header.style.top = '0';
+        header.classList.remove('scrolled');
     }
-
-    lastScroll = currentScroll;
 });
+
 
 
 
