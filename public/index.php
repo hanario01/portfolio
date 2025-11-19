@@ -23,7 +23,7 @@
     <main>
         <div class="first__view"></div>
         <section id="works" class="sections " data-bg="#1b1b1b">
-            <div class=" section__container">
+            <div class=" section__container works__conatiner">
                 <h2 class="section__title white-shadow">WORKS</h2>
                 <div class="works__tabs">
                     <button class="tab-btn">Website</button>

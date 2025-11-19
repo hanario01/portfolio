@@ -19,18 +19,21 @@
         <?php include('../public/header.php'); ?>
     </header>
     <main class="work-main">
-        <div class="hero">
-            <div class="hero__container">
+        <div class="hero sections" data-bg="#2D4B50">
+            <div class="back-to-works">
+                <a href="/works" class="back-to-works-btn">← Back to Works</a>
+            </div>
+            <div class="hero__container">  
                 <div class="hero__title">
                     <span class="site-tag"><a href="">#website</a></span>
                     <h1>.Anew(架空)</h1>
                 </div>
                 <div class="hero__image">
-                    <img src="" alt="">
+                    <img src="../images/mockDrop_dpc.jpg" alt="">
                 </div>
             </div>
         </div>
-        <section class="sections">
+        <section class="sections" data-bg="">
             <div class="section__container">
                 <div class="work__info">
                     <div class="work__info__items">
@@ -39,7 +42,12 @@
                             <h1 class="works__title">.Anew (架空サイト)</h1>
                         </div>
                         <div class="siteview-btn">
-                            <a href="">Live Site</a>
+                            <a href="" target="_blank" rel="noopener">
+                                Live Site 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 2a1 1 0 0 1 1-1h5.5a.5.5 0 0 1 .5.5v5.5a1 1 0 0 1-1 1h-1v-1h.5V2H7v.5H6V2z"/>
+                                <path d="M1 7v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-3h-1v3H2V8h3V7H2a1 1 0 0 0-1 1z"/>
+                                </svg>
                         </div>
                     </div>
                     <div class="project__container">
@@ -78,27 +86,46 @@
                 </div>
             </section>
 
-            <section>
+            <section class="sections" data-bg="#2D4B50">
                 <div class="section__container">
                     <div class="mockup-wrapper">
                         <ul class="mockup-container">
                             <li class="mockup-phone">
                                 <div class="screen">
-                                    <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
+                                    <img src="../images/top-sp-anew.png" alt="スマホモック" />
                                 </div>
                             </li>
                             <li class="mockup-phone">
                                 <div class="screen">
-                                    <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
+                                    <img src="../images/mock_sp_concept.png" alt="スマホモック" />
                                 </div>
                             </li>
                             <li class="mockup-phone">
                                 <div class="screen">
-                                    <img src="65adb97d-9294-42e7-a9f2-fba02627c39e.png" alt="スマホモック" />
+                                    <img src="../images/mock_sp_hairstyle.png" alt="スマホモック" />
                                 </div>
                             </li>
                         </ul>
                     </div>
+                    <div class="desktop-page">
+                        <img src="../images/first-view.jpg" alt="">
+                    </div>
+                    <div class="siteview-btn">
+                            <a href="" target="_blank" rel="noopener">
+                                Live Site 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M6 2a1 1 0 0 1 1-1h5.5a.5.5 0 0 1 .5.5v5.5a1 1 0 0 1-1 1h-1v-1h.5V2H7v.5H6V2z"/>
+                                <path d="M1 7v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-3h-1v3H2V8h3V7H2a1 1 0 0 0-1 1z"/>
+                                </svg>
+                        </div>
+                </div>
+            </section>
+            <section id="contact" class="sections" data-bg="#C8B496">
+                <div class="section__container">
+                    <div class="contact__btn text-center">
+                        <a href="#contact">CONTACT</a>
+                    </div>
+                    
                 </div>
             </section>
         </div>

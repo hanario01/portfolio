@@ -1,22 +1,32 @@
 
-const header = document.querySelector('.site-header');
 const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.top__nav');
-
-// スクロールでハンバーガー切り替え
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+const desktopNav = document.querySelector('.desktop-nav');
+const header = document.querySelector('.site-header');
 
 // ハンバーガー開閉
 hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');        // ナビ表示切替
+    desktopNav.classList.toggle('active');
     hamburger.classList.toggle('active'); // ハンバーガーアニメーション
 });
+
+// スクロールでヘッダー切り替え
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 80) {
+        // 下スクロール → ヘッダー非表示
+        header.style.top = '-100px';
+    } else {
+        // 上スクロール → ヘッダー表示
+        header.style.top = '0';
+    }
+
+    lastScroll = currentScroll;
+});
+
+
 
 
 

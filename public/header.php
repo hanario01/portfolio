@@ -18,4 +18,10 @@
         <span></span>
         </div>
     </div>
+     <!-- デスクトップ／モバイル兼用の右上ナビ -->
+    <div class="desktop-nav">
+        <a href="#works">WORKS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
 </header>
