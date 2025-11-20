@@ -9,7 +9,7 @@
         <nav class="nav">
             <ul class="top__nav">
                 <li><a href="/portfolio/public/index.php">WORKS</a></li>
-                <li><a href="/portfolio/public/views/about.php">ABOUT</a></li>
+                <li><a href="/portfolio/views/about.php">ABOUT</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>

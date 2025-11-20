@@ -24,6 +24,42 @@ window.addEventListener('scroll', () => {
 
 
 
+// ----------------------
+// pタグフェードイン処理
+// ----------------------
+document.addEventListener('DOMContentLoaded', () => {
+    // ターゲット：すべての p タグ
+    const targets = document.querySelectorAll('p');
+
+    if (!('IntersectionObserver' in window)) {
+        // 古いブラウザ対策：すべて表示
+        targets.forEach(t => {
+            t.classList.add('fadein', 'is-visible');
+        });
+        return;
+    }
+
+    // 最初に fadein クラスを付与しておく（CSSで初期非表示になる）
+    targets.forEach(t => t.classList.add('fadein'));
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target); // 一度見えたら監視解除（パフォーマンス向上）
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -10% 0px', // 画面下10%手前で発火させる
+        threshold: 0.12
+    });
+
+    targets.forEach(t => observer.observe(t));
+});
+
+
+
 
 
 
@@ -120,10 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const projects = {
     1: {
-        image: '../images/work-01.jpg',
+        image: '../images/first-view.jpg',
         description: `
-      <h3>案件1：教育アプリ</h3>
-      <p>ユーザーが間違えた問題を復習できる機能を実装しました。</p>
+      <h3>案件1：美容院サイト「.Anew」</h3>
+      <p>架空ウェブサイトのコーディングを担当しました。</p>
     `
     },
     2: {

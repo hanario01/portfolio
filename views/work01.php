@@ -54,7 +54,9 @@
                         <div class="project__overview">
                             <div class="project__overview_item ">
                                 <h2 class="project__overview_dis h2-color">Project Overview</h2>
-                                <p>大手企業のコーポレートサイトをリニューアル。ブランドイメージを保ちながら、モダンで使いやすいUIを実現しました。レスポンシブデザインを採用し、あらゆるデバイスで最適な表示を提供します。アクセシビリティにも配慮し、WCAG 2.1 AA基準を満たしています。</p>
+                                <p>本案件では、デザイナーが制作したWebサイトデザインをもとに、コーディングを担当しました。
+レイアウトや余白、動きのニュアンスまで細部を正確に再現することを意識し、デザインの意図を損なわない実装を心がけています。
+また、レスポンシブ対応や使いやすさにも配慮し、ユーザーにとってストレスのない閲覧体験を実現しました。</p>
                             </div>
                         
                             <div class="project__tools">
@@ -110,7 +112,7 @@
                     <div class="desktop-page">
                         <img src="../images/first-view.jpg" alt="">
                     </div>
-                    <div class="siteview-btn">
+                    <div class="sitebtn">
                             <a href="" target="_blank" rel="noopener">
                                 Live Site 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -121,17 +123,36 @@
                 </div>
             </section>
             <section id="contact" class="sections" data-bg="#C8B496">
-                <div class="section__container">
-                    <div class="contact__btn text-center">
-                        <a href="#contact">CONTACT</a>
-                    </div>
+            <div class="section__container contact__inner text-center">
+
+                <p class="contact__message">
                     
+                    ご覧いただき、誠にありがとうございます。<br>
+                    ご依頼やお問い合わせにつきましては、こちらよりお気軽にご連絡ください。
+                </p>
+
+                <div class="contact__btn">
+                    <a href="#contact">CONTACT</a>
                 </div>
+                
+            </div>
             </section>
         </div>
 
     </main>
-     <?php include('../views/footer.php'); ?>
+    <footer class="footer">
+    <div class="footer__container">
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="http://localhost/portfolio/">WORKS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <p class="footer__copy">© SHOMA KAI</p>
+    </div>
+    </footer>
     <script src="../JS/script.js"></script>
 </body>
 

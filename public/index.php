@@ -35,11 +35,11 @@
                     <div class="works_main__view">
                         <figure class="work-01 reveal-image">
                             <a href="#works">
-                                <img id="main-image" class="main-image" src="../images/work-01.jpg" alt="案件画像">
+                                <img id="main-image" class="main-image" src="../images/first-view.jpg" alt="案件画像">
                             </a>
                             <figcaption id="main-description">
-                                <h3 class="main-description-title">案件1：教育アプリ</h3>
-                                <p>ユーザーが間違えた問題を復習できる機能を実装しました</p>
+                                <h3 class="main-description-title">案件1：美容院サイト「.Anew」</h3>
+                                <p>架空ウェブサイトのコーディングを担当しました。</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="mSCL__container">
                         <ul>
                             <li class="thumbnail click-animesion" data-id="1">
-                                <img src="../images/work-01.jpg" alt="案件1">
+                                <img src="../images/first-view.jpg" alt="案件1">
                             </li>
                             <li class="thumbnail" data-id="2">
                                 <img src="../images/work-02.jpg" alt="案件2">
@@ -113,16 +113,35 @@
 
         
         <section id="contact" class="sections" data-bg="#C8B496">
-            <div class="section__container">
-                <div class="contact__btn text-center">
+            <div class="section__container contact__inner text-center">
+
+                <p class="contact__message">
+                    
+                    ご覧いただき、誠にありがとうございます。<br>
+                    ご依頼やお問い合わせにつきましては、こちらよりお気軽にご連絡ください。
+                </p>
+
+                <div class="contact__btn">
                     <a href="#contact">CONTACT</a>
                 </div>
                 
             </div>
-        </section>
+            </section>
 
     </main>
-     
+    <footer class="footer">
+    <div class="footer__container">
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="http://localhost/portfolio/">WORKS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <p class="footer__copy">© SHOMA KAI</p>
+    </div>
+    </footer>
     <script src="../JS/script.js"></script>
 </body>
 

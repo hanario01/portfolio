@@ -77,6 +77,10 @@ h2 {
 }
 
 
+
+
+
+
 /* ---------------------
    Read More Button
 ----------------------*/
@@ -172,6 +176,7 @@ h2 {
 --------------------------- */
 
 .header {
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px;
@@ -217,7 +222,13 @@ nav {
 .top__nav li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+
+.top__nav li a:hover {
+    opacity: 0.7;
 }
 
 /* ハンバーガー */
@@ -552,11 +563,56 @@ About-------------
 CONTACT-------------------------
 ------------------- */
 
+/* 全体の揃え */
+.contact__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* 日本語メッセージ（上品・高級） */
+.contact__message {
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    color: #4A3B32;
+    /* 背景#C8B496と相性の良い深いブラウン */
+    font-weight: 500;
+
+    /* ゴールド系の上品な影 */
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.6),
+        0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTACT（存在感＋高級感） */
 .contact__btn a {
     font-size: 100px;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    /* 柔らかい影 */
+    font-weight: 600;
+    color: #4A3B32;
+    /* ダークブラウンで高級感 */
+    letter-spacing: 0.05em;
+
+    /* 深みとツヤのある文字影 */
+    text-shadow:
+        0 2px 2px rgba(255, 255, 255, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        0 0 15px rgba(255, 230, 180, 0.4);
+    /* ゴールドの柔らかい輝き */
 }
+
+/* スマホ対応（必要なら） */
+@media (max-width: 768px) {
+    .contact__btn a {
+        font-size: 60px;
+    }
+
+    .contact__message {
+        font-size: 18px;
+    }
+}
+
 
 /* Skillの下から線を落とすための枠 */
 .fall-line-wrapper {
@@ -768,6 +824,15 @@ Works page----------------
     margin-top: 70px;
 }
 
+.back-to-works {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.back-to-works:hover {
+    opacity: 0.7;
+}
+
 .hero__image {
     width: 100%;
     height: 90vh;
@@ -848,6 +913,11 @@ Works page----------------
     border-radius: 1px;
 }
 
+.siteview-btn:hover {
+    background-color: #C8B496;
+    color: #1b1b1b;
+}
+
 .project__container {
     margin-top: 2rem;
 }
@@ -906,30 +976,17 @@ Works page----------------
 .mockup-phone {
     display: flex;
     width: 22%;
-    /* モックの横幅 */
-    height: 430px;
-    /* モックの高さ */
-    border: 10px solid #ccc;
-    /* スマホのフレーム */
-    border-radius: 36px;
-    /* 角丸でスマホ感 */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    position: relative;
-    overflow: hidden;
 }
 
-.mockup-phone::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 5px;
-    background-color: #aaa;
-    border-radius: 3px;
-    /* スマホ上部スピーカー */
+.sitebtn {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.sitebtn:hover {
+    color: #1b1b1b;
 }
 
 .screen img {
